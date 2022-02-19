@@ -12,7 +12,7 @@ spring:
     username: root
     password: Melih.11
     driver-class-name: com.mysql.cj.jdbc.Driver
-   jpa:
+  jpa:
     hibernate:
       ddl-auto: update
     properties:
@@ -20,10 +20,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
         format_sql: true
     show-sql: true
-
 backendapi:
   app:
     jwtSecret: carRentalSecretKey
     jwtExpirationMs: 7200000
-
-

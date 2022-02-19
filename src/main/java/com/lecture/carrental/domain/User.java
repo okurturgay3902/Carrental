@@ -34,7 +34,7 @@ public class User {
     @Size(max = 15)
     @NotNull(message = "Please enter your last name")
     @Column(nullable = false, length = 15)
-    private String lastname;
+    private String lastName;
 
     @Size(min = 4, max = 60)
     @NotNull(message = "Please enter your password")
