@@ -5,11 +5,14 @@ import com.lecture.carrental.domain.FileDB;
 import com.lecture.carrental.exception.ResourceNotFoundException;
 import com.lecture.carrental.repository.FileDBRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 import java.util.stream.Stream;
 
@@ -37,6 +40,7 @@ public class FileDBService {
 
         return  fileDBRepository.findAll().stream();
     }
+
 
 
 }

@@ -3,6 +3,7 @@ package com.lecture.carrental.domain;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -58,7 +59,7 @@ public class Car {
     @Column(nullable = false, length = 30)
     private String fuelType;
 
-    private Boolean builtIn;
+    private Boolean builtIn = false;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "car_image",
