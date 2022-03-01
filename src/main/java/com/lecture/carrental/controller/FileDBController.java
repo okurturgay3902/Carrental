@@ -1,6 +1,5 @@
 package com.lecture.carrental.controller;
 
-
 import com.lecture.carrental.domain.FileDB;
 import com.lecture.carrental.dto.FileDTO;
 import com.lecture.carrental.service.FileDBService;
@@ -49,7 +48,8 @@ public class FileDBController {
         }
     }
 
-    @GetMapping("/{id}")
+    // TODO: change it
+    @GetMapping("/download/{id}")
     public ResponseEntity<byte[]> getFile(@PathVariable String id) {
         FileDB fileDB = fileDBService.getFileById(id);
 
