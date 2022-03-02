@@ -6,6 +6,7 @@ import com.lecture.carrental.domain.enumeration.ReservationStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -46,7 +47,6 @@ public class Reservation {
     @Column(length = 150, nullable = false)
     private String pickUpLocation;
 
-
     @Size(max = 150)
     @NotNull(message = "Please enter the drop off location of the reservation")
     @Column(length = 150, nullable = false)
@@ -56,14 +56,13 @@ public class Reservation {
     @Column(length = 30, nullable = false)
     private ReservationStatus status;
 
-
     @Column(nullable = false)
     private Double totalPrice;
 
-    public Long getTotalHours(LocalDateTime pickUpTime, LocalDateTime dropOffTime){
+
+    public Long getTotalHours(LocalDateTime pickUpTime, LocalDateTime dropOffTime) {
 
         return ChronoUnit.HOURS.between(pickUpTime, dropOffTime);
     }
-
 
 }
